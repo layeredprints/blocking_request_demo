@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: development
+  application:
+    name: task-service-api
+  mvc:
+    async:
+      request-timeout: -1
+queue:
+  prefix: "task-service"
+  creation: "creation"
+  completion: "completion"
+---
+spring:
+  profiles: development
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+---
+spring:
+  profiles: test
+---
