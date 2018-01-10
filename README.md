@@ -20,6 +20,6 @@ $ java -jar worker/target/demo-worker-0.0.1-SNAPSHOT.jar
 
 * Use with curl
 ```sh
-$ curl -H "Content-Type: appc":false}' http://localhost:8080/v1/tasks  # call will return after 10 seconds 
-$ curl -H "Content-Type: appc":true}' http://localhost:8080/v1/tasks # call will return immediately
+$ curl -H "Content-Type: appc":false}' http://localhost:8080/v1/tasks  # call will return after the task is finished (Thread.sleep of 10 sec).
+$ curl -H "Content-Type: appc":true}' http://localhost:8080/v1/tasks # call will return immediately, before the work is done.
 ```
